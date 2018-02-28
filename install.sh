@@ -1,10 +1,3 @@
-# Backup files
-mkdir -p ~/migration/home
-
-cp ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ ~/migration/sublime
-cp ~/.oh-my-zsh/themes/straker.zsh-theme ~/migration/zsh
-cp ~/bin ~/migration/bin
-
 # Install Xcode Command Line Tools
 if ! xcode-select --print-path &> /dev/null; then
 
