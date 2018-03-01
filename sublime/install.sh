@@ -5,6 +5,9 @@ echo -e "\033[1mCopying Sublime Text settings\033[0m"
 echo '#############################'
 echo ''
 
+# Open subl to ensure the Application Support directory exists
+subl
+
 # Install Sublime Text settings
 # Because there can be multiple versions of sublime, we need to copy individually
 # to each version

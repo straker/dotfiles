@@ -23,7 +23,6 @@ brew upgrade
 
 # Install the Homebrew packages
 apps=(
-  nvm
   git
 )
 
