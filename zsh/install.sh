@@ -13,6 +13,7 @@ if [[ ! -d $HOME/.oh-my-zsh/ ]]; then
   sed -i.tmp 's:env zsh::g' zsh-install.sh
   sh zsh-install.sh
   rm zsh-install.sh
+  rm zsh-install.sh.tmp
 fi
 
 # Install theme
