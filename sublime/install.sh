@@ -2,7 +2,7 @@
 
 echo ''
 echo -e "\033[1mCopying Sublime Text settings\033[0m"
-echo '########################'
+echo '#############################'
 echo ''
 
 # Install Sublime Text settings

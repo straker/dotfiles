@@ -2,7 +2,7 @@
 
 echo ''
 echo -e "\033[1mInstalling node and global packages\033[0m"
-echo '########################'
+echo '###################################'
 echo ''
 
 export NVM_DIR="$HOME/.nvm"

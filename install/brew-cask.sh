@@ -2,7 +2,7 @@
 
 echo ''
 echo -e "\033[1mInstalling brew cask and apps\033[0m"
-echo '########################'
+echo '#############################'
 echo ''
 
 # Install Caskroom

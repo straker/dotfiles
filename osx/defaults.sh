@@ -2,7 +2,7 @@
 
 echo ''
 echo -e "\033[1mSetting Mac defaults\033[0m"
-echo '########################'
+echo '####################'
 echo ''
 
 #

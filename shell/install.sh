@@ -2,7 +2,7 @@
 
 echo ''
 echo -e "\033[1mCopying .zshrc and shell scripts\033[0m"
-echo '########################'
+echo '################################'
 echo ''
 
 cp "$DIR/shell/.zshrc" ~/
