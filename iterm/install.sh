@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Installing iTerm color theme and fonts"
+echo ''
+echo -e "\033[1mInstalling iTerm color theme and fonts\033[0m"
+echo '########################'
+echo ''
 
 # Install the Solarized Dark theme for iTerm
 open "$DIR/iterm/Solarized Dark.itermcolors"

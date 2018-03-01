@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Setting Mac defaults"
+echo ''
+echo -e "\033[1mSetting Mac defaults\033[0m"
+echo '########################'
+echo ''
 
 #
 # Reasonably sets OS X defaults. My sources:

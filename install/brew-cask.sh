@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Installing brew cask and apps"
+echo ''
+echo -e "\033[1mInstalling brew cask and apps\033[0m"
+echo '########################'
+echo ''
 
 # Install Caskroom
 brew tap caskroom/cask

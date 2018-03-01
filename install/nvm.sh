@@ -1,8 +1,12 @@
 #!/bin/sh
 
-echo "Installing node and global packages"
+echo ''
+echo -e "\033[1mInstalling node and global packages\033[0m"
+echo '########################'
+echo ''
 
 export NVM_DIR="$HOME/.nvm"
+mkdir -p ~/.nvm
 source $(brew --prefix nvm)/nvm.sh  # This loads nvm
 
 # Install the latest stable version of node

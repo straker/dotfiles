@@ -32,33 +32,16 @@ if ! xcode-select --print-path &> /dev/null; then
 
 fi
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-export DIR
+# Export script directory to use in child scripts
+export DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Brew
+# Install scripts
 ./install/brew.sh
 ./install/brew-cask.sh
-
-# Node
 ./install/nvm.sh
-
-# OSX defaults
 ./osx/defaults.sh
-
-# iTerm
 ./iterm/install.sh
-
-# zsh
-if [[ ! -d $HOME/.oh-my-zsh/ ]]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi
 ./zsh/install.sh
-
-# Sublime
 ./sublime/install.sh
-
-# Bin
 ./bin/install.sh
-
-# Shell
 ./shell/install.sh

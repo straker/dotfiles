@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Installing brew and apps"
+echo ''
+echo -e "\033[1mInstalling brew and apps\033[0m"
+echo '########################'
+echo ''
 
 # Ask for the administrator password upfront
 sudo -v

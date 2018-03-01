@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Copying bin files"
+echo ''
+echo -e "\033[1mCopying bin files\033[0m"
+echo '########################'
+echo ''
 
 # Change permission
 chmod +rwx "$DIR/bin/batcharge.py"
