@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Change permission and move bin files
-chmod +rwx ./batcharge.py
-chmod +rwx ./ssh-key
+chmod +rwx "$DIR/bin/batcharge.py"
+chmod +rwx "$DIR/bin/ssh-key"
 
-cp ./batcharge.py ~/bin/
-cp ./ssh-key ~/bin/
+cp "$DIR/bin/batcharge.py" ~/bin/
+cp "$DIR/bin/ssh-key" ~/bin/

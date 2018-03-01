@@ -1,5 +1,9 @@
 #!/bin/bash
 
 # Install Sublime Text settings
-cp -r ./Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
-cp -r ./Default (OSX).sublime-keymap ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Default (OSX).sublime-keymap 2> /dev/null
+# Because there can be multiple versions of sublime, we need to copy individually
+# to each version
+for fileglob in ~/Library/Application\ Support/Sublime\ Text*/; do
+  cp "$DIR/sublime/Preferences.sublime-settings" "$fileglob/Packages/User/Preferences.sublime-settings"
+  cp "$DIR/sublime/Default (OSX).sublime-keymap" "$fileglob/Packages/User/Default (OSX).sublime-keymap"
+done

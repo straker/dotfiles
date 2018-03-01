@@ -32,6 +32,9 @@ if ! xcode-select --print-path &> /dev/null; then
 
 fi
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export DIR
+
 # Brew
 ./install/brew.sh
 ./install/brew-cask.sh

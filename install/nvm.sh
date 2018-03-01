@@ -1,6 +1,10 @@
 #!/bin/sh
 
-# This script configures my Node.js development setup
+# Install node and global npm dependencies
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 if test ! $(which nvm)
 then
   echo "Installing a stable version of Node..."

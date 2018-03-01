@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp ./.zshrc ~/
-cp ./.shell_aliases ~/
-cp ./.shell_config ~/
+cp "$DIR/shell/.zshrc" ~/
+cp "$DIR/shell/.shell_aliases" ~/
+cp "$DIR/shell/.shell_config" ~/
