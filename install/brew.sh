@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Installs Homebrew and some of the common dependencies needed/desired for software development
+echo "Installing brew and apps"
 
 # Ask for the administrator password upfront
 sudo -v

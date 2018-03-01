@@ -1,23 +1,14 @@
 #!/bin/sh
 
-# Install node and global npm dependencies
+echo "Installing node and global packages"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source $(brew --prefix nvm)/nvm.sh  # This loads nvm
 
-if test ! $(which nvm)
-then
-  echo "Installing a stable version of Node..."
-
-  # Install the latest stable version of node
-  nvm install stable
-
-  # Switch to the installed version
-  nvm use node
-
-  # Use the stable version of node by default
-  nvm alias default node
-fi
+# Install the latest stable version of node
+nvm install stable
+nvm use node
+nvm alias default node
 
 # Globally install with npm
 packages=(

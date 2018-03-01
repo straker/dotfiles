@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Copying Sublime Text settings"
+
 # Install Sublime Text settings
 # Because there can be multiple versions of sublime, we need to copy individually
 # to each version

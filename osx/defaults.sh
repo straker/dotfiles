@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Setting Mac defaults"
+
 #
 # Reasonably sets OS X defaults. My sources:
 #  - https://github.com/skwp/dotfiles/blob/master/bin/osx

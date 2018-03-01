@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Installing brew cask and apps"
+
 # Install Caskroom
 brew tap caskroom/cask
 
