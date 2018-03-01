@@ -94,11 +94,11 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+mkdir -p ~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Load the shell dotfiles
-for file in $HOME/.{shell_aliases,shell_config}; do
+for file in $HOME/.{shell_config}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
