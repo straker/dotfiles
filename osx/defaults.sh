@@ -76,7 +76,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Set clock to 12 hour format with AM/PM
 # @see https://apple.stackexchange.com/questions/75116/i-want-to-change-clock-from-12h-to-24h-mode-via-terminal
-defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  h:mm:ss a'
+defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  h:mm a'
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
@@ -208,16 +208,6 @@ done
 # Do some clean up work.
 ###############################################################################
 
-for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-           "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-           "Terminal" "Twitter" "iCal"; do
-           killall "${app}" > /dev/null 2>&1
-done
-
-# Wait a bit before moving on...
-sleep 1
-
-# ...and then.
 echo "Success! Defaults are set."
 echo "Some changes will not take effect until you reboot your machine."
 
@@ -238,5 +228,10 @@ then
   sudo reboot
   exit 0
 else
+  for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+           "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+           "Terminal" "Twitter" "iCal"; do
+    killall "${app}" > /dev/null 2>&1
+  done
   exit 1
 fi
