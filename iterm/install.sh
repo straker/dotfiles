@@ -18,7 +18,7 @@ if [[ ! -d $HOME/.oh-my-zsh/ ]]; then
 fi
 
 # Install theme
-cp "$DIR/zsh/straker.zsh-theme" ~/.oh-my-zsh/themes/
+cp "$DIR/iterm/straker.zsh-theme" ~/.oh-my-zsh/themes/
 
 # Install the Solarized Dark theme for iTerm
 open "$DIR/iterm/Solarized Dark.itermcolors"
