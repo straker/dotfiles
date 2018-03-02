@@ -1,6 +1,6 @@
-# Steven Lambert's Dotfile
+# Steven Lambert's Dotfiles
 
-My personal dotfile setup to configure any new Mac, based on https://github.com/nicksp/dotfiles.
+My personal dotfiles setup to configure any new Mac, based on https://github.com/nicksp/dotfiles.
 
 ## Features
 
