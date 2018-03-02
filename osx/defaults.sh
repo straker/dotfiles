@@ -198,6 +198,12 @@ defaults write com.apple.dock autohide -bool true
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
+# Add preferred apps to the Dock
+for app in "Opera" "Safari" "Firefox" "Google\ Chrome" "iTerm" "Sublime\ Text" "Notes" \
+           "Mail" "Calendar" "Slack" "Postman" "Spotify"; do
+  defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/${app}.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+done
+
 ###############################################################################
 # Do some clean up work.
 ###############################################################################
@@ -205,11 +211,8 @@ defaults write com.apple.dock persistent-apps -array
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
            "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
            "Terminal" "Twitter" "iCal"; do
-           kill all "${app}" > /dev/null 2>&1
+           killall "${app}" > /dev/null 2>&1
 done
-
-# kill the system clock
-kill -SIGHUP SystemUIServer
 
 # Wait a bit before moving on...
 sleep 1
