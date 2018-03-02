@@ -19,3 +19,5 @@ for fileglob in ~/Library/Application\ Support/Sublime\ Text*/; do
   curl -o "$fileglob/Installed Packages/Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
   cp "$DIR/sublime/Package Control.sublime-settings" "$fileglob/Packages/User/Package Control.sublime-settings"
 done
+
+echo 'Sublime Packages Installed. Open the Package Manager in Sublime to download packages'
