@@ -39,9 +39,9 @@ export DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ./install/brew.sh
 ./install/brew-cask.sh
 ./install/nvm.sh
-./osx/defaults.sh
 ./iterm/install.sh
 ./zsh/install.sh
 ./sublime/install.sh
 ./bin/install.sh
 ./shell/install.sh
+./osx/defaults.sh
