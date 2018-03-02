@@ -7,7 +7,7 @@ My personal dotfile setup to configure any new Mac, based on https://github.com/
 * brew, brew cask, nvm, node LTS, and http-server
 * Chrome, Firefox, Opera, Sublime Text, Slack, Postman, and Spotify
 * iTerm with custom theme (based on Remy Sharp's terminal theme)
-* custom Sublime Text settings and keybindings
+* custom Sublime Text settings and keybindings, with some default Packages installed
 * custom OS X Defaults configured to my liking
 
 ## Installation
