@@ -199,7 +199,7 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock persistent-apps -array
 
 # Add preferred apps to the Dock
-for app in "Opera" "Safari" "Firefox" "Google\ Chrome" "iTerm" "Sublime\ Text" "Notes" \
+for app in "Opera" "Safari" "Firefox" "Google Chrome" "iTerm" "Sublime Text" "Notes" \
            "Mail" "Calendar" "Slack" "Postman" "Spotify"; do
   defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/${app}.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
