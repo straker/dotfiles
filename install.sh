@@ -40,8 +40,39 @@ export DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ./install/brew-cask.sh
 ./install/nvm.sh
 ./iterm/install.sh
-./zsh/install.sh
 ./sublime/install.sh
 ./bin/install.sh
 ./shell/install.sh
 ./osx/defaults.sh
+
+###############################################################################
+# Do some clean up work.
+###############################################################################
+
+echo "Computer successfully configured!"
+echo "Some changes will not take effect until you reboot your machine."
+
+# See if the user wants to reboot.
+function reboot() {
+  read -p "Do you want to reboot your computer now? (y/N)" choice
+  case "$choice" in
+    y | Yes | yes ) echo "Yes"; exit;; # If y | yes, reboot
+    n | N | No | no) echo "No"; exit;; # If n | no, exit
+    * ) echo "Invalid answer. Enter \"y/yes\" or \"N/no\"" && return;;
+  esac
+}
+
+# Call on the function
+if [[ "Yes" == $(reboot) ]]
+then
+  echo "Rebooting."
+  sudo reboot
+  exit 0
+else
+  for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+           "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+           "Terminal" "Twitter" "iCal"; do
+    killall "${app}" > /dev/null 2>&1
+  done
+  exit 1
+fi

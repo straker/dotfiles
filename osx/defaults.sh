@@ -74,7 +74,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Show remaining battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
-# Set clock to 12 hour format with AM/PM
+# Set clock to show date, day, and 12 hour format with AM/PM
 # @see https://apple.stackexchange.com/questions/75116/i-want-to-change-clock-from-12h-to-24h-mode-via-terminal
 defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  h:mm a'
 
@@ -194,8 +194,6 @@ sudo pmset -a hibernatemode 0
 defaults write com.apple.dock autohide -bool true
 
 # Wipe all (default) app icons from the Dock
-# This is only really useful when setting up a new Mac, or if you don’t use
-# the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
 # Add preferred apps to the Dock
@@ -203,35 +201,3 @@ for app in "Opera" "Safari" "Firefox" "Google Chrome" "iTerm" "Sublime Text" "No
            "Mail" "Calendar" "Slack" "Postman" "Spotify"; do
   defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/${app}.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
-
-###############################################################################
-# Do some clean up work.
-###############################################################################
-
-echo "Success! Defaults are set."
-echo "Some changes will not take effect until you reboot your machine."
-
-# See if the user wants to reboot.
-function reboot() {
-  read -p "Do you want to reboot your computer now? (y/N)" choice
-  case "$choice" in
-    y | Yes | yes ) echo "Yes"; exit;; # If y | yes, reboot
-    n | N | No | no) echo "No"; exit;; # If n | no, exit
-    * ) echo "Invalid answer. Enter \"y/yes\" or \"N/no\"" && return;;
-  esac
-}
-
-# Call on the function
-if [[ "Yes" == $(reboot) ]]
-then
-  echo "Rebooting."
-  sudo reboot
-  exit 0
-else
-  for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-           "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-           "Terminal" "Twitter" "iCal"; do
-    killall "${app}" > /dev/null 2>&1
-  done
-  exit 1
-fi
