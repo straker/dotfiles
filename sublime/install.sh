@@ -16,6 +16,7 @@ for fileglob in ~/Library/Application\ Support/Sublime\ Text*/; do
   cp "$DIR/sublime/Default (OSX).sublime-keymap" "$fileglob/Packages/User/Default (OSX).sublime-keymap"
 
   # Install Sublime Text Package Control and default packages
+  # @see https://stackoverflow.com/questions/19529999/add-package-control-in-sublime-text-3-through-the-command-line
   curl -o "$fileglob/Installed Packages/Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
   cp "$DIR/sublime/Package Control.sublime-settings" "$fileglob/Packages/User/Package Control.sublime-settings"
 done
