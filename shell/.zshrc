@@ -4,15 +4,16 @@ export ZSH=$HOME/.oh-my-zsh
 # Directories to be prepended to $PATH
 declare -a dirs_to_prepend
 dirs_to_prepend=(
-  "/usr/bin"
+  "/usr/local/bin"
   "/usr/local/sbin"
   "/usr/local/git/bin"
-  "/usr/local/"
+  "/usr/local"
+  "/usr/bin"
   "$HOME/bin"
 )
 
 # Explicitly configured $PATH
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PATH="/bin:/usr/sbin:/sbin"
 
 for dir in ${(k)dirs_to_prepend[@]}
 do
