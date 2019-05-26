@@ -20,4 +20,4 @@ apps=(
   sublime-text
 )
 
-brew cask install "${apps[@]}"
+brew cask install "${apps[@]}" --force
