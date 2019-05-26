@@ -87,6 +87,9 @@ defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  h:mm a'
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# Customize touch bar control strip
+defaults write ~/Library/Preferences/com.apple.controlstrip FullCustomized '(com.apple.system.group.brightness, com.apple.system.mission-control, com.apple.system.launchpad, com.apple.system.group.keyboard-brightness, com.apple.system.group.media, com.apple.system.group.volume )'
+
 ###############################################################################
 # iTerm
 ###############################################################################

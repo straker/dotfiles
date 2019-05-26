@@ -71,7 +71,7 @@ then
 else
   for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
            "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-           "Terminal" "Twitter" "iCal"; do
+           "Terminal" "Twitter" "iCal" "ControlStrip"; do
     killall "${app}" > /dev/null 2>&1
   done
   exit 1
