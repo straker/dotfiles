@@ -5,6 +5,10 @@ echo -e "\033[1mInstalling iTerm theme, colors, and fonts\033[0m"
 echo '######################################'
 echo ''
 
+if ! declare -p DIR &> /dev/null; then
+  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+fi
+
 # Install zsh
 if [[ ! -d $HOME/.oh-my-zsh/ ]]; then
   # zsh install will run zsh at the end and stop script execution

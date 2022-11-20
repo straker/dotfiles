@@ -5,6 +5,10 @@ echo -e "\033[1mCopying Sublime Text settings and installing packages\033[0m"
 echo '#####################################################'
 echo ''
 
+if ! declare -p DIR &> /dev/null; then
+  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+fi
+
 # Open subl to ensure the Application Support directory exists
 subl
 
