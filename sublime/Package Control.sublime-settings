@@ -3,12 +3,8 @@
   [
     "Babel",
     "BracketHighlighter",
-    "EJS 2",
-    "Handlebars",
     "MarkdownEditing",
     "Package Control",
-    "Pretty JSON",
-    "Sass",
-    "Stylus"
+    "Pretty JSON"
   ]
 }

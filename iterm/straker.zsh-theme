@@ -104,10 +104,6 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
-function battery_charge {
-  echo `~/bin/batcharge.py`
-}
-
 function node_version {
   echo `node -v`
 }
@@ -121,7 +117,7 @@ build_prompt() {
   prompt_end
 }
 
-RPROMPT='$(battery_charge) $(node_version)'
+RPROMPT='$(node_version)'
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 » '
