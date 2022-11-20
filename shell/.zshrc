@@ -106,3 +106,7 @@ unset file;
 
 # npm tab completion
 . <(npm completion)
+
+# start brew
+# @see https://apple.stackexchange.com/a/413207
+eval $(/opt/homebrew/bin/brew shellenv)
